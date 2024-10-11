@@ -1,0 +1,300 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: white;
+    position: relative;
+    min-height: 100vh;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o título principal */
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#start,
+#reset {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#rankingBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #68489b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#score,
+#message {
+    font-size: 18px;
+    margin: 5px 0;
+    text-align: center; /* Centraliza a mensagem e pontuação */
+}
+
+#game {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(2, 150px);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.button {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    opacity: 0.8;
+    transition: opacity 0.3s, transform 0.3s ease;
+    cursor: pointer;
+}
+
+#green {
+    background-color: green;
+    border-radius: 100% 15px 15px !important;
+}
+
+#red {
+    background-color: red;
+    border-radius: 15px 100% 15px 15px !important;
+}
+
+#yellow {
+    background-color: yellow;
+    border-radius: 15px 15px 15px 100% !important;
+}
+
+#blue {
+    background-color: blue;
+    border-radius: 15px 15px 100% !important;
+}
+
+.button:active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Centraliza o formulário de login */
+#loginBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #68489b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Estilo do formulário de login */
+#loginForm,
+#signupForm {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginForm input,
+#signupForm input {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+#loginForm button,
+#signupForm button {
+    padding: 10px 20px;
+    background-color: #68489b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#loginForm button:hover,
+#signupForm button:hover {
+    background-color: #563b8b;
+}
+
+#closeLogin,
+#closeSignup {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+}
+
+#signupLink {
+    color: #68489b;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+/* Ranking */
+#rankingTable {
+    display: none;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    text-align: center;
+    width: 80%;
+    position: relative;
+}
+
+#closeRankingBtn {
+    font-size: 35px;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 10px 20px;
+    background-color: #68489b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#closeRankingBtn:hover {
+    color: #68489b;
+}
+
+#rankingTable h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+#rankingTable table {
+    width: 100%; 
+    border-collapse: collapse;
+}
+
+#rankingTable th,
+#rankingTable td {
+    padding: 10px;
+    border: 1px solid white;
+    text-align: center; /* Centraliza o texto nas células */
+}
+
+#closeRanking {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+}
+
+/* Responsividade para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        margin-top: 40%;
+    }
+
+    #game {
+        grid-template-columns: repeat(2, 100px);
+        grid-template-rows: repeat(2, 100px);
+        gap: 8px;
+    }
+
+    .button {
+        width: 100px;
+        height: 100px;
+    }
+
+    #rankingBtn,
+    #loginBtn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    #loginForm,
+    #signupForm {
+        width: 250px;
+        padding: 30px;
+    }
+
+    #rankingTable {
+        padding: 15px;
+    }
+
+    #rankingTable th,
+    #rankingTable td {
+        padding: 8px;
+    }
+}
+
+/* Responsividade para telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+    #game {
+        grid-template-columns: repeat(2, 80px);
+        grid-template-rows: repeat(2, 80px);
+        gap: 6px;
+    }
+
+    .button {
+        width: 80px;
+        height: 80px;
+    }
+
+    #rankingBtn,
+    #loginBtn {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    #loginForm,
+    #signupForm {
+        width: 200px;
+        padding: 20px;
+    }
+
+    #rankingTable {
+        padding: 10px;
+    }
+
+    #rankingTable th,
+    #rankingTable td {
+        padding: 5px;
+    }
+}

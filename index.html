@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Simon</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Jogo Simon</h1>
+
+    <div id="controls">
+        <p id="score">Pontos: <span id="scoreValue">0</span></p>
+        <p id="userNameDisplay"></p>
+        <div class="btn" style="display: flex; flex-direction: row;">
+            <button id="start">START</button>
+            <button id="reset">RESET</button>
+        </div>
+        <button id="rankingBtn">Ranking</button>
+        <p id="message"></p>
+    </div>
+
+    <div id="game">
+        <div class="button" id="green"></div>
+        <div class="button" id="red"></div>
+        <div class="button" id="yellow"></div>
+        <div class="button" id="blue"></div>
+    </div>
+
+    <button id="loginBtn">Login</button>
+
+    
+    <div id="loginForm">
+        <button id="closeLogin">X</button>
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Usuário">
+        <input type="password" id="password" placeholder="Senha">
+        <button id="submitLogin">Entrar</button>
+        <div id="signupLink">Cadastre-se</div>
+    </div>
+
+    <div id="signupForm">
+        <button id="closeSignup">X</button>
+        <h2>Cadastre-se</h2>
+        <input type="text" id="signupUsername" placeholder="Usuário">
+        <input type="email" id="signupEmail" placeholder="Email">
+        <input type="password" id="signupPassword" placeholder="Senha">
+        <button id="submitSignup">OK</button>
+    </div>
+
+    <div id="rankingTable">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2>Ranking</h2>
+            <button id="closeRankingBtn" style="border:none; background:none;">&times;</button>
+        </div>
+        <table>
+            <thead>
+                <tr> 
+                    <th>Usuário</th>
+                    <th>Pontuação</th>
+                </tr>
+            </thead>
+            <tbody id="rankingBody">
+            </tbody>
+        </table>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>
